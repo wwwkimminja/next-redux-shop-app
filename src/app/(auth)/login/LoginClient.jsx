@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import LogoPath from '@/assets/colorful.svg';
 import { useRouter } from 'next/navigation';
 import styles from './Auth.module.scss';
+import Loader from '@/components/loader/Loader';
 
 const LoginClient = () => {
 
@@ -23,6 +24,7 @@ const LoginClient = () => {
   }
   return (
     <>
+    {isLoading&&<Loader />}
       <section className={styles.page}>
         <div className={styles.container}>
           <h1 className={styles.logo}>
